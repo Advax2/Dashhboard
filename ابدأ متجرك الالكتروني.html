@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AdVax — دليل الاشتراك</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Cairo',sans-serif;background:#080510;color:#e2e8f0;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+
+/* ══ PRINT HINT ══ */
+.hint{background:#7c3aed;color:#fff;text-align:center;padding:10px 16px;font-size:0.8em;font-weight:700;position:sticky;top:0;z-index:999;}
+@media print{.hint{display:none;}}
+
+/* ══ PAGES ══ */
+.page{width:100%;max-width:794px;margin:0 auto;overflow:hidden;position:relative;background:#080510;}
+@media screen{.page{margin-bottom:2px;box-shadow:0 0 60px rgba(124,58,237,0.2);}}
+@media print{.page{page-break-after:always;max-width:100%;}.page:last-child{page-break-after:auto;}@page{margin:0;size:A4;}}
+
+/* ══ SHARED ══ */
+.gradient-text{background:linear-gradient(135deg,#fff 0%,#c4b5fd 40%,#7c3aed 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.gradient-text-pink{background:linear-gradient(135deg,#fff 0%,#f9a8d4 50%,#ec4899 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:6px 18px;border-radius:50px;font-size:0.75em;font-weight:800;letter-spacing:0.5px;}
+.pill-purple{background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.4);color:#c4b5fd;}
+.pill-pink{background:rgba(236,72,153,0.15);border:1px solid rgba(236,72,153,0.35);color:#f9a8d4;}
+.pill-green{background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);color:#6ee7b7;}
+
+/* ══════════════════════════
+   PAGE 1 — COVER
+══════════════════════════ */
+.cover{min-height:1123px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 36px;position:relative;overflow:hidden;background:linear-gradient(160deg,#0a0614 0%,#120820 40%,#0e0518 100%);}
+.cover-orb1{position:absolute;top:-200px;right:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.18) 0%,transparent 65%);pointer-events:none;}
+.cover-orb2{position:absolute;bottom:-150px;left:-150px;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(236,72,153,0.12) 0%,transparent 65%);pointer-events:none;}
+.cover-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.018) 1px,transparent 1px);background-size:50px 50px;}
+.cover-lines{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent 60%,rgba(8,5,16,0.95) 100%);pointer-events:none;}
+.cover-inner{position:relative;z-index:1;text-align:center;width:100%;max-width:640px;}
+
+.brand-mark{display:inline-flex;align-items:center;gap:14px;margin-bottom:36px;}
+.brand-hex{width:56px;height:56px;background:linear-gradient(135deg,#7c3aed,#ec4899);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5em;box-shadow:0 12px 40px rgba(124,58,237,0.4);}
+.brand-name{font-size:2em;font-weight:900;letter-spacing:-0.5px;}
+.brand-name span{color:#c4b5fd;}
+
+.cover-eyebrow{margin-bottom:24px;}
+.cover-h1{font-size:clamp(2em,5.5vw,3.2em);font-weight:900;line-height:1.15;margin-bottom:18px;}
+.cover-sub{font-size:0.92em;color:rgba(255,255,255,0.55);font-weight:600;line-height:1.9;max-width:500px;margin:0 auto 48px;}
+
+.cover-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px;}
+.cstat{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:22px 12px;text-align:center;position:relative;overflow:hidden;}
+.cstat::before{content:'';position:absolute;bottom:-20px;right:-20px;width:80px;height:80px;border-radius:50%;opacity:0.08;}
+.cstat.s1::before{background:#7c3aed;}
+.cstat.s2::before{background:#ec4899;}
+.cstat.s3::before{background:#10b981;}
+.cstat-val{font-size:2em;font-weight:900;line-height:1;}
+.cstat.s1 .cstat-val{color:#a78bfa;}
+.cstat.s2 .cstat-val{color:#f472b6;}
+.cstat.s3 .cstat-val{color:#34d399;}
+.cstat-lbl{font-size:0.72em;color:rgba(255,255,255,0.45);font-weight:700;margin-top:6px;line-height:1.4;}
+
+.cover-feats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:40px;text-align:right;}
+.cfeat{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:14px 16px;}
+.cfeat-ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1em;flex-shrink:0;}
+.cfeat-ico.v1{background:rgba(124,58,237,0.25);}
+.cfeat-ico.v2{background:rgba(236,72,153,0.2);}
+.cfeat-ico.v3{background:rgba(16,185,129,0.2);}
+.cfeat-ico.v4{background:rgba(251,191,36,0.2);}
+.cfeat-txt{font-size:0.8em;font-weight:700;color:rgba(255,255,255,0.75);line-height:1.4;}
+
+.cover-divider{width:50px;height:2px;background:linear-gradient(90deg,#7c3aed,#ec4899);border-radius:2px;margin:0 auto 18px;}
+.cover-tagline{font-size:0.8em;color:rgba(255,255,255,0.3);font-weight:600;}
+
+/* ══════════════════════════
+   INNER PAGE HEADER
+══════════════════════════ */
+.pg-hdr{background:linear-gradient(135deg,#0e0518,#180a2e);padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(124,58,237,0.2);}
+.pg-hdr-brand{font-size:1em;font-weight:900;color:#fff;}
+.pg-hdr-brand span{color:#a78bfa;}
+.pg-hdr-mid{font-size:0.75em;font-weight:800;color:rgba(255,255,255,0.4);}
+.pg-hdr-num{font-size:0.7em;font-weight:800;color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.06);padding:4px 12px;border-radius:20px;}
+
+/* ══════════════════════════
+   INNER PAGE BODY
+══════════════════════════ */
+.pg-body{padding:36px 40px;min-height:980px;}
+
+/* SECTION TITLE */
+.sec-hd{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
+.sec-hd-ico{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.2em;flex-shrink:0;}
+.sec-hd-ico.pu{background:linear-gradient(135deg,rgba(124,58,237,0.4),rgba(124,58,237,0.2));border:1px solid rgba(124,58,237,0.3);}
+.sec-hd-ico.pk{background:linear-gradient(135deg,rgba(236,72,153,0.35),rgba(236,72,153,0.15));border:1px solid rgba(236,72,153,0.25);}
+.sec-hd-ico.gn{background:linear-gradient(135deg,rgba(16,185,129,0.3),rgba(16,185,129,0.12));border:1px solid rgba(16,185,129,0.25);}
+.sec-hd-ico.gd{background:linear-gradient(135deg,rgba(251,191,36,0.3),rgba(251,191,36,0.12));border:1px solid rgba(251,191,36,0.25);}
+.sec-hd-title{font-size:1.15em;font-weight:900;color:#fff;}
+.sec-hd-title em{font-style:normal;color:#a78bfa;}
+
+/* FEATURE GRID */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:28px;}
+.feat-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:20px 18px;position:relative;overflow:hidden;transition:0.2s;}
+.feat-card::before{content:'';position:absolute;bottom:-25px;left:-25px;width:90px;height:90px;border-radius:50%;opacity:0.06;}
+.feat-card.fc-pu::before{background:#7c3aed;}
+.feat-card.fc-pk::before{background:#ec4899;}
+.feat-card.fc-gn::before{background:#10b981;}
+.feat-card.fc-gd::before{background:#fbbf24;}
+.feat-ico{font-size:1.8em;margin-bottom:10px;}
+.feat-title{font-size:0.9em;font-weight:800;color:#fff;margin-bottom:6px;}
+.feat-desc{font-size:0.75em;font-weight:600;color:rgba(255,255,255,0.45);line-height:1.75;}
+.feat-tag{display:inline-flex;margin-top:8px;padding:3px 10px;border-radius:20px;font-size:0.65em;font-weight:800;}
+.ft-pu{background:rgba(124,58,237,0.2);color:#c4b5fd;border:1px solid rgba(124,58,237,0.3);}
+.ft-pk{background:rgba(236,72,153,0.15);color:#f9a8d4;border:1px solid rgba(236,72,153,0.25);}
+.ft-gn{background:rgba(16,185,129,0.15);color:#6ee7b7;border:1px solid rgba(16,185,129,0.25);}
+.ft-gd{background:rgba(251,191,36,0.15);color:#fde68a;border:1px solid rgba(251,191,36,0.25);}
+
+/* HIGHLIGHT BOX */
+.hbox{border-radius:18px;padding:20px 22px;margin-bottom:22px;}
+.hbox.pu{background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(124,58,237,0.05));border:1px solid rgba(124,58,237,0.25);}
+.hbox.pk{background:linear-gradient(135deg,rgba(236,72,153,0.1),rgba(236,72,153,0.04));border:1px solid rgba(236,72,153,0.2);}
+.hbox.gn{background:linear-gradient(135deg,rgba(16,185,129,0.1),rgba(16,185,129,0.04));border:1px solid rgba(16,185,129,0.2);}
+.hbox.gd{background:linear-gradient(135deg,rgba(251,191,36,0.1),rgba(251,191,36,0.04));border:1px solid rgba(251,191,36,0.2);}
+.hbox-title{font-size:0.82em;font-weight:900;margin-bottom:12px;}
+.hbox.pu .hbox-title{color:#c4b5fd;}
+.hbox.pk .hbox-title{color:#f9a8d4;}
+.hbox.gn .hbox-title{color:#6ee7b7;}
+.hbox.gd .hbox-title{color:#fde68a;}
+.hbox-list{display:flex;flex-direction:column;gap:8px;}
+.hbox-item{display:flex;align-items:flex-start;gap:10px;font-size:0.8em;font-weight:600;color:rgba(255,255,255,0.55);line-height:1.65;}
+.hbox-item::before{content:'◆';font-size:0.7em;margin-top:3px;flex-shrink:0;}
+.hbox.pu .hbox-item::before{color:#7c3aed;}
+.hbox.pk .hbox-item::before{color:#ec4899;}
+.hbox.gn .hbox-item::before{color:#10b981;}
+.hbox.gd .hbox-item::before{color:#fbbf24;}
+
+/* MOCK STORE */
+.mock{background:#0f172a;border-radius:22px;padding:16px;border:1px solid rgba(255,255,255,0.07);margin-bottom:22px;overflow:hidden;}
+.mock-header{background:#fff;border-radius:14px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.mock-store-name{font-size:0.85em;font-weight:900;color:#0f172a;}
+.mock-icons{display:flex;gap:6px;}
+.mock-icon{width:28px;height:28px;border-radius:8px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:0.75em;}
+.mock-cats{display:flex;gap:7px;margin-bottom:12px;}
+.mock-cat{padding:5px 14px;border-radius:50px;font-size:0.65em;font-weight:800;}
+.mock-cat.on{background:var(--ac,#7c3aed);color:#fff;}
+.mock-cat.off{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.08);}
+.mock-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px;}
+.mock-card{background:#1e293b;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.06);}
+.mock-img{height:52px;display:flex;align-items:center;justify-content:center;font-size:1.4em;position:relative;}
+.mock-img .mock-badge{position:absolute;top:4px;right:4px;background:#7c3aed;color:#fff;font-size:0.5em;font-weight:800;padding:2px 6px;border-radius:4px;}
+.mock-img .mock-disc{position:absolute;top:4px;right:4px;background:#ec4899;color:#fff;font-size:0.5em;font-weight:800;padding:2px 5px;border-radius:4px;}
+.mock-info{padding:7px 8px 9px;}
+.mock-pname{font-size:0.6em;font-weight:700;color:#e2e8f0;margin-bottom:3px;line-height:1.3;}
+.mock-price-row{display:flex;align-items:center;gap:4px;}
+.mock-price{font-size:0.65em;font-weight:900;color:#fbbf24;}
+.mock-price-old{font-size:0.55em;color:#475569;text-decoration:line-through;font-weight:600;}
+.mock-add{background:linear-gradient(135deg,#7c3aed,#ec4899);color:#fff;font-size:0.55em;font-weight:800;padding:4px 6px;border-radius:6px;text-align:center;margin-top:5px;}
+.mock-nav{background:#fff;border-radius:12px;display:flex;padding:8px 0;margin-top:10px;}
+.mock-nb{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:0.55em;font-weight:700;color:#94a3b8;}
+.mock-nb.on{color:#7c3aed;}
+.mock-nb-ico{font-size:1.4em;}
+
+/* DARK MODE MOCK */
+.mock-dark{background:#1e293b;}
+.mock-d-hdr{background:#0f172a;border-radius:14px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;border:1px solid rgba(255,255,255,0.06);}
+.mock-d-name{font-size:0.82em;font-weight:900;color:#e2e8f0;}
+.mock-d-btn{background:rgba(255,255,255,0.08);border-radius:8px;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:0.8em;}
+
+/* COMPARE TABLE */
+.comp-wrap{overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,0.08);margin-bottom:24px;}
+.comp{width:100%;border-collapse:collapse;}
+.comp thead tr{background:linear-gradient(135deg,rgba(124,58,237,0.3),rgba(236,72,153,0.2));}
+.comp th{padding:13px 14px;font-size:0.78em;font-weight:800;color:#fff;text-align:center;}
+.comp th:first-child{text-align:right;}
+.comp td{padding:11px 14px;font-size:0.78em;font-weight:600;text-align:center;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.6);}
+.comp tr:last-child td{border-bottom:none;}
+.comp tr:nth-child(even) td{background:rgba(255,255,255,0.02);}
+.comp td:first-child{text-align:right;color:#e2e8f0;font-weight:700;}
+.comp .yes{color:#34d399;font-weight:800;}
+.comp .no{color:#f87171;font-weight:700;}
+.comp .hl td{background:rgba(124,58,237,0.08) !important;}
+
+/* STEPS */
+.steps{display:flex;flex-direction:column;gap:14px;margin-bottom:24px;}
+.step-item{display:flex;gap:16px;align-items:flex-start;}
+.step-num{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#ec4899);color:#fff;font-weight:900;font-size:0.88em;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 20px rgba(124,58,237,0.35);}
+.step-body{}
+.step-title{font-size:0.9em;font-weight:800;color:#fff;margin-bottom:4px;}
+.step-desc{font-size:0.78em;font-weight:600;color:rgba(255,255,255,0.45);line-height:1.7;}
+.step-desc strong{color:#c4b5fd;}
+
+/* PAGE FOOTER */
+.pg-ft{background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.06);padding:12px 40px;display:flex;align-items:center;justify-content:space-between;}
+.pg-ft-brand{font-size:0.72em;font-weight:800;color:rgba(255,255,255,0.3);}
+.pg-ft-brand span{color:#a78bfa;}
+.pg-ft-num{font-size:0.68em;font-weight:700;color:rgba(255,255,255,0.2);}
+
+/* ══════════════════════════
+   CTA PAGE
+══════════════════════════ */
+.cta-pg{min-height:1123px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 36px;position:relative;overflow:hidden;background:linear-gradient(160deg,#0a0614,#180a2e,#0a1020);}
+.cta-orb1{position:absolute;top:-180px;left:-180px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.2),transparent 65%);}
+.cta-orb2{position:absolute;bottom:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(236,72,153,0.15),transparent 65%);}
+.cta-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:50px 50px;}
+.cta-inner{position:relative;z-index:1;text-align:center;width:100%;max-width:620px;}
+.cta-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);color:#6ee7b7;padding:7px 20px;border-radius:50px;font-size:0.75em;font-weight:800;margin-bottom:28px;}
+.cta-badge-dot{width:7px;height:7px;background:#10b981;border-radius:50%;animation:blink 1.5s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.cta-h{font-size:clamp(1.8em,4.5vw,2.8em);font-weight:900;line-height:1.2;margin-bottom:16px;}
+.cta-sub{font-size:0.88em;color:rgba(255,255,255,0.5);line-height:1.9;margin-bottom:48px;max-width:520px;margin-left:auto;margin-right:auto;}
+.cta-boxes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:40px;text-align:right;}
+.cta-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:20px 18px;}
+.cta-box-ico{font-size:1.6em;margin-bottom:10px;}
+.cta-box-t{font-size:0.85em;font-weight:800;color:#fff;margin-bottom:5px;}
+.cta-box-d{font-size:0.75em;font-weight:600;color:rgba(255,255,255,0.45);line-height:1.65;}
+.price-card{background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(236,72,153,0.15));border:1px solid rgba(124,58,237,0.35);border-radius:24px;padding:28px 36px;margin-bottom:36px;position:relative;overflow:hidden;}
+.price-card::before{content:'';position:absolute;top:-1px;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#7c3aed,#ec4899,transparent);}
+.price-lbl{font-size:0.78em;font-weight:700;color:rgba(255,255,255,0.4);margin-bottom:8px;}
+.price-main{font-size:2.6em;font-weight:900;color:#fff;line-height:1;}
+.price-main span{font-size:0.45em;color:#c4b5fd;font-weight:700;margin-right:6px;}
+.price-note{font-size:0.75em;color:rgba(255,255,255,0.4);margin-top:10px;font-weight:600;}
+.price-includes{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px;}
+.pi{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);padding:5px 12px;border-radius:50px;font-size:0.7em;font-weight:700;}
+.cta-contact-lbl{font-size:0.82em;color:rgba(255,255,255,0.4);font-weight:600;margin-bottom:10px;}
+.cta-wa{display:inline-flex;align-items:center;gap:10px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.25);color:#4ade80;padding:12px 28px;border-radius:50px;font-size:0.9em;font-weight:900;}
+.cta-footer{font-size:0.7em;color:rgba(255,255,255,0.2);margin-top:32px;font-weight:600;}
+
+/* ══ MOBILE ══ */
+@media(max-width:600px){
+  .pg-hdr,.pg-ft{padding:14px 18px;}
+  .pg-body{padding:22px 18px;min-height:auto;}
+  .feat-grid{grid-template-columns:1fr;}
+  .cover-stats{grid-template-columns:repeat(3,1fr);}
+  .cstat-val{font-size:1.6em;}
+  .cover-feats{grid-template-columns:1fr;}
+  .cta-boxes{grid-template-columns:1fr;}
+  .cover{padding:36px 20px;}
+  .cta-pg{padding:40px 20px;}
+  .comp th,.comp td{padding:9px 8px;font-size:0.7em;}
+  .mock-grid{grid-template-columns:repeat(3,1fr);}
+  .price-main{font-size:2em;}
+}
+</style>
+</head>
+<body>
+
+<div class="hint">🖨️ للحفظ كـ PDF: Ctrl+P ← حفظ كـ PDF ← فعّل "خلفيات الرسوم"</div>
+
+<!-- ══════════════════ PAGE 1 — COVER ══════════════════ -->
+<div class="page">
+<div class="cover">
+  <div class="cover-orb1"></div>
+  <div class="cover-orb2"></div>
+  <div class="cover-grid"></div>
+  <div class="cover-lines"></div>
+  <div class="cover-inner">
+
+    <div class="brand-mark">
+      <div class="brand-hex">⚡</div>
+      <div class="brand-name">Ad<span>Vax</span></div>
+    </div>
+
+    <div class="cover-eyebrow">
+      <span class="pill pill-purple">🛒 متاجر إلكترونية احترافية</span>
+    </div>
+
+    <div class="cover-h1">
+      <span class="gradient-text">متجرك الاحترافي</span><br>
+      <span class="gradient-text-pink">في أقل من 24 ساعة</span>
+    </div>
+
+    <p class="cover-sub">
+      نبني لك متجراً إلكترونياً بمستوى التطبيقات الكبرى — يعمل على الموبايل والكمبيوتر، تتحكم به بنفسك، ويُحدَّث فورياً بدون أي خبرة تقنية
+    </p>
+
+    <div class="cover-stats">
+      <div class="cstat s1">
+        <div class="cstat-val">24h</div>
+        <div class="cstat-lbl">التسليم في أقل من 24 ساعة</div>
+      </div>
+      <div class="cstat s2">
+        <div class="cstat-val">∞</div>
+        <div class="cstat-lbl">عدد غير محدود من المنتجات</div>
+      </div>
+      <div class="cstat s3">
+        <div class="cstat-val">0</div>
+        <div class="cstat-lbl">خبرة تقنية مطلوبة</div>
+      </div>
+    </div>
+
+    <div class="cover-feats">
+      <div class="cfeat">
+        <div class="cfeat-ico v1">🌙</div>
+        <div class="cfeat-txt">وضع ليلي ونهاري تلقائي مدمج</div>
+      </div>
+      <div class="cfeat">
+        <div class="cfeat-ico v2">🛒</div>
+        <div class="cfeat-txt">سلة تسوق مع إتمام الطلب واتساب</div>
+      </div>
+      <div class="cfeat">
+        <div class="cfeat-ico v3">🔍</div>
+        <div class="cfeat-txt">بحث فوري وفلترة ذكية للمنتجات</div>
+      </div>
+      <div class="cfeat">
+        <div class="cfeat-ico v4">🎨</div>
+        <div class="cfeat-txt">هوية بصرية كاملة خاصة بمتجرك</div>
+      </div>
+    </div>
+
+    <div class="cover-divider"></div>
+    <div class="cover-tagline">AdVax — نحن لا نبني مواقع، نبني تجارب تسوق لا تُنسى</div>
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════ PAGE 2 — STORE FEATURES ══════════════════ -->
+<div class="page">
+<div class="pg-hdr">
+  <div class="pg-hdr-brand">Ad<span>Vax</span></div>
+  <div class="pg-hdr-mid">مميزات المتجر</div>
+  <div class="pg-hdr-num">٢ / ٥</div>
+</div>
+<div class="pg-body">
+
+  <div class="sec-hd">
+    <div class="sec-hd-ico pu">✨</div>
+    <div class="sec-hd-title">ما الذي <em>يحصل عليه متجرك؟</em></div>
+  </div>
+
+  <div class="feat-grid">
+    <div class="feat-card fc-pu">
+      <div class="feat-ico">🌙</div>
+      <div class="feat-title">وضع ليلي ونهاري</div>
+      <div class="feat-desc">يتحول متجرك تلقائياً بين الوضع الفاتح والداكن بضغطة واحدة — تجربة مريحة لكل الزبائن في أي وقت</div>
+      <span class="feat-tag ft-pu">حصري</span>
+    </div>
+    <div class="feat-card fc-pk">
+      <div class="feat-ico">🛒</div>
+      <div class="feat-title">سلة تسوق ذكية</div>
+      <div class="feat-desc">الزبون يختار منتجاته ويضعها في السلة، ثم يُرسل طلبه مباشرة عبر واتساب بقائمة مرتبة تلقائياً</div>
+      <span class="feat-tag ft-pk">تلقائي</span>
+    </div>
+    <div class="feat-card fc-gn">
+      <div class="feat-ico">🔍</div>
+      <div class="feat-title">بحث وفلترة فورية</div>
+      <div class="feat-desc">البحث يظهر النتائج فورياً أثناء الكتابة — والفلترة بالتصنيف تسهّل على الزبون إيجاد ما يريد بالضبط</div>
+      <span class="feat-tag ft-gn">سريع</span>
+    </div>
+    <div class="feat-card fc-gd">
+      <div class="feat-ico">💎</div>
+      <div class="feat-title">صفحة تفاصيل المنتج</div>
+      <div class="feat-desc">اضغط على أي منتج ليظهر بطاقة تفاصيل أنيقة مع الصورة والوصف والسعر وزر الطلب — بدون الخروج من الصفحة</div>
+      <span class="feat-tag ft-gd">تفاعلي</span>
+    </div>
+    <div class="feat-card fc-pk">
+      <div class="feat-ico">🔥</div>
+      <div class="feat-title">قسم العروض المنزلق</div>
+      <div class="feat-desc">قسم خاص للعروض والخصومات يظهر كشريط أفقي أنيق يمكن التمرير فيه — يلفت الانتباه فوراً</div>
+      <span class="feat-tag ft-pk">جذّاب</span>
+    </div>
+    <div class="feat-card fc-pu">
+      <div class="feat-ico">📂</div>
+      <div class="feat-title">تصنيفات ذكية</div>
+      <div class="feat-desc">صنّف منتجاتك في أقسام — يظهر شريط تصنيفات أنيق يتيح للزبون التنقل بسهولة بين الفئات المختلفة</div>
+      <span class="feat-tag ft-pu">منظّم</span>
+    </div>
+  </div>
+
+  <!-- STORE MOCK -->
+  <div class="mock">
+    <div class="mock-header">
+      <div class="mock-store-name">متجرك ✨</div>
+      <div class="mock-icons">
+        <div class="mock-icon">🔍</div>
+        <div class="mock-icon">🌙</div>
+      </div>
+    </div>
+    <div class="mock-cats">
+      <div class="mock-cat on" style="background:linear-gradient(135deg,#7c3aed,#ec4899);">الكل</div>
+      <div class="mock-cat off">عناية</div>
+      <div class="mock-cat off">عطور</div>
+      <div class="mock-cat off">مكياج</div>
+    </div>
+    <div class="mock-grid">
+      <div class="mock-card">
+        <div class="mock-img" style="background:linear-gradient(135deg,#1e1035,#2d1b69);">🧴<div class="mock-badge">جديد</div></div>
+        <div class="mock-info"><div class="mock-pname">Body Splash الأصلي</div><div class="mock-price-row"><div class="mock-price">85,000</div></div><div class="mock-add">أضف للسلة</div></div>
+      </div>
+      <div class="mock-card">
+        <div class="mock-img" style="background:linear-gradient(135deg,#1a1035,#3b0764);">🌹<div class="mock-disc">-20%</div></div>
+        <div class="mock-info"><div class="mock-pname">كريم مرطب فاخر</div><div class="mock-price-row"><div class="mock-price">65,000</div><div class="mock-price-old">80,000</div></div><div class="mock-add">أضف للسلة</div></div>
+      </div>
+      <div class="mock-card">
+        <div class="mock-img" style="background:linear-gradient(135deg,#0f172a,#1e1b4b);">💆</div>
+        <div class="mock-info"><div class="mock-pname">زيت العناية الطبيعي</div><div class="mock-price-row"><div class="mock-price">120,000</div></div><div class="mock-add">أضف للسلة</div></div>
+      </div>
+    </div>
+    <div class="mock-nav">
+      <div class="mock-nb on"><div class="mock-nb-ico">🏠</div>الرئيسية</div>
+      <div class="mock-nb"><div class="mock-nb-ico">📦</div>منتجات</div>
+      <div class="mock-nb"><div class="mock-nb-ico">⭐</div>عروض</div>
+      <div class="mock-nb"><div class="mock-nb-ico">🛒</div>السلة</div>
+    </div>
+  </div>
+
+</div>
+<div class="pg-ft"><div class="pg-ft-brand">Ad<span>Vax</span></div><div class="pg-ft-num">الصفحة ٢</div></div>
+</div>
+
+<!-- ══════════════════ PAGE 3 — MORE FEATURES ══════════════════ -->
+<div class="page">
+<div class="pg-hdr">
+  <div class="pg-hdr-brand">Ad<span>Vax</span></div>
+  <div class="pg-hdr-mid">المزيد من المميزات</div>
+  <div class="pg-hdr-num">٣ / ٥</div>
+</div>
+<div class="pg-body">
+
+  <div class="sec-hd">
+    <div class="sec-hd-ico pk">🎨</div>
+    <div class="sec-hd-title">هويتك البصرية <em>100% خاصة بك</em></div>
+  </div>
+
+  <div class="feat-grid" style="margin-bottom:20px;">
+    <div class="feat-card fc-pk">
+      <div class="feat-ico">🎨</div>
+      <div class="feat-title">ألوان خاصة بمتجرك</div>
+      <div class="feat-desc">9 خيارات ألوان مخصصة — اللون الأساسي، الثانوي، الخلفية، الكروت، شارات الخصم، وكل تفصيلة بصرية في متجرك</div>
+    </div>
+    <div class="feat-card fc-pu">
+      <div class="feat-ico">✒️</div>
+      <div class="feat-title">خط اللوغو</div>
+      <div class="feat-desc">اختر من 6 خطوط احترافية مختلفة لاسم متجرك — Cairo، Tajawal، Almarai، Lemonada، Lalezar، Changa</div>
+    </div>
+    <div class="feat-card fc-gd">
+      <div class="feat-ico">🏷️</div>
+      <div class="feat-title">شارات الخصم والعروض</div>
+      <div class="feat-desc">نسبة الخصم تُحسب وتظهر تلقائياً على كل منتج بسعر مخفوض — شارة ملونة بارزة تلفت انتباه الزبون فوراً</div>
+      <span class="feat-tag ft-gd">تلقائي</span>
+    </div>
+    <div class="feat-card fc-gn">
+      <div class="feat-ico">📤</div>
+      <div class="feat-title">مشاركة المنتجات</div>
+      <div class="feat-desc">كل منتج يمكن مشاركته مباشرة من صفحة التفاصيل — زر مشاركة مدمج يرسل رابط المنتج لأي شخص بضغطة واحدة</div>
+    </div>
+  </div>
+
+  <div class="sec-hd" style="margin-top:8px;">
+    <div class="sec-hd-ico gn">🔍</div>
+    <div class="sec-hd-title">ظهور متجرك <em>في Google</em></div>
+  </div>
+
+  <div class="hbox gn" style="margin-bottom:16px;">
+    <div class="hbox-title">📈 SEO مدمج — متجرك يظهر في نتائج البحث</div>
+    <div class="hbox-list">
+      <div class="hbox-item">وصف مخصص للمتجر يظهر في نتائج Google بشكل احترافي</div>
+      <div class="hbox-item">كلمات مفتاحية مستهدفة تجلب الزبائن من البحث الطبيعي</div>
+      <div class="hbox-item">صورة خاصة تظهر عند مشاركة رابط متجرك على فيسبوك وواتساب</div>
+      <div class="hbox-item">دعم SEO محلي — متجرك يظهر في بحثات منطقتك الجغرافية</div>
+    </div>
+  </div>
+
+  <div class="sec-hd">
+    <div class="sec-hd-ico gd">⚡</div>
+    <div class="sec-hd-title">أداء <em>يفوق التوقعات</em></div>
+  </div>
+
+  <div class="feat-grid">
+    <div class="feat-card fc-gd">
+      <div class="feat-ico">⚡</div>
+      <div class="feat-title">تحميل فائق السرعة</div>
+      <div class="feat-desc">شاشة تحميل أنيقة تظهر أثناء جلب المنتجات — لا صفحات فارغة ولا انتظار مزعج، تجربة سلسة من الثانية الأولى</div>
+    </div>
+    <div class="feat-card fc-pu">
+      <div class="feat-ico">📱</div>
+      <div class="feat-title">موبايل أولاً</div>
+      <div class="feat-desc">كل تفصيلة مصممة للموبايل — قائمة سفلية ثابتة، بطاقات تتكيف مع الشاشة، وتجربة لمس احترافية</div>
+      <span class="feat-tag ft-pu">Mobile First</span>
+    </div>
+    <div class="feat-card fc-gn">
+      <div class="feat-ico">🔼</div>
+      <div class="feat-title">زر العودة للأعلى</div>
+      <div class="feat-desc">عند التمرير للأسفل يظهر زر أنيق للعودة لأعلى الصفحة فوراً — يحسّن تجربة التصفح مع الكتالوجات الكبيرة</div>
+    </div>
+    <div class="feat-card fc-pk">
+      <div class="feat-ico">🔄</div>
+      <div class="feat-title">تحديث المنتجات فوري</div>
+      <div class="feat-desc">أي تعديل تجريه في لوحة التحكم يظهر في متجرك خلال ثوانٍ — بدون أي خطوات تقنية أو إعادة رفع</div>
+      <span class="feat-tag ft-pk">فوري</span>
+    </div>
+  </div>
+
+</div>
+<div class="pg-ft"><div class="pg-ft-brand">Ad<span>Vax</span></div><div class="pg-ft-num">الصفحة ٣</div></div>
+</div>
+
+<!-- ══════════════════ PAGE 4 — COMPARE ══════════════════ -->
+<div class="page">
+<div class="pg-hdr">
+  <div class="pg-hdr-brand">Ad<span>Vax</span></div>
+  <div class="pg-hdr-mid">لماذا AdVax؟</div>
+  <div class="pg-hdr-num">٤ / ٥</div>
+</div>
+<div class="pg-body">
+
+  <div class="sec-hd">
+    <div class="sec-hd-ico pu">🏆</div>
+    <div class="sec-hd-title">AdVax <em>مقابل البدائل الأخرى</em></div>
+  </div>
+
+  <div class="comp-wrap">
+    <table class="comp">
+      <thead>
+        <tr>
+          <th style="width:32%;">الميزة</th>
+          <th>AdVax</th>
+          <th>وكالة تقليدية</th>
+          <th>صفحة فيسبوك</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl"><td>تصميم احترافي</td><td class="yes">✓ متكامل</td><td class="yes">✓</td><td class="no">محدود</td></tr>
+        <tr><td>وضع ليلي مدمج</td><td class="yes">✓</td><td class="no">إضافي</td><td class="no">✗</td></tr>
+        <tr><td>سلة تسوق + واتساب</td><td class="yes">✓ تلقائي</td><td class="yes">✓ بتكلفة</td><td class="no">يدوي</td></tr>
+        <tr><td>بحث وفلترة فورية</td><td class="yes">✓</td><td class="yes">✓ بتكلفة</td><td class="no">✗</td></tr>
+        <tr><td>صفحة تفاصيل المنتج</td><td class="yes">✓ أنيقة</td><td class="yes">✓</td><td class="no">✗</td></tr>
+        <tr><td>تحديث المنتجات بنفسك</td><td class="yes">✓ فوري</td><td class="no">تعتمد عليهم</td><td class="yes">✓</td></tr>
+        <tr><td>SEO مدمج</td><td class="yes">✓</td><td class="yes">✓ بتكلفة</td><td class="no">✗</td></tr>
+        <tr><td>لوحة تحكم خاصة</td><td class="yes">✓ حصرية</td><td class="no">✗</td><td class="no">✗</td></tr>
+        <tr><td>دعم واتساب مباشر</td><td class="yes">✓</td><td class="no">مدفوع</td><td class="no">✗</td></tr>
+        <tr class="hl"><td>التكلفة الشهرية</td><td class="yes">منخفضة جداً</td><td class="no">عالية جداً</td><td class="yes">مجانية</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-hd">
+    <div class="sec-hd-ico pk">🚀</div>
+    <div class="sec-hd-title">كيف <em>يبدأ متجرك؟</em></div>
+  </div>
+
+  <div class="steps">
+    <div class="step-item">
+      <div class="step-num">١</div>
+      <div class="step-body">
+        <div class="step-title">تواصل معنا وأرسل بياناتك</div>
+        <div class="step-desc">أرسل لنا <strong>اسم المتجر، الألوان التي تريدها، رقم الواتساب</strong> وأي تفاصيل أخرى — لدينا استمارة جاهزة تسهّل العملية</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">٢</div>
+      <div class="step-body">
+        <div class="step-title">نبني متجرك خلال أقل من 24 ساعة</div>
+        <div class="step-desc">فريقنا يبني متجرك بتصميم احترافي كامل ونُسلّمه لك جاهزاً للنشر — <strong>لا تحتاج تفعل أي شيء تقني</strong></div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">٣</div>
+      <div class="step-body">
+        <div class="step-title">تحصل على لوحة التحكم الخاصة بك</div>
+        <div class="step-desc">نرسل لك رابط داشبوردك الخاص ومفتاح الدخول — من هذه اللحظة أنت المتحكم الكامل بمنتجاتك <strong>بدون الحاجة لنا</strong></div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">٤</div>
+      <div class="step-body">
+        <div class="step-title">ابدأ البيع فوراً</div>
+        <div class="step-desc">أضف منتجاتك، شاركه على فيسبوك وانستغرام، وابدأ تستقبل الطلبات عبر واتساب — <strong>متجرك يعمل 24 ساعة يومياً</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hbox pu">
+    <div class="hbox-title">🎯 ما يميّز كل متجر AdVax</div>
+    <div class="hbox-list">
+      <div class="hbox-item">لوحة تحكم حصرية خاصة بك — لا تشاركها مع أحد آخر</div>
+      <div class="hbox-item">تحديثات مستمرة — كل ميزة جديدة تصل لمتجرك تلقائياً</div>
+      <div class="hbox-item">دعم واتساب مباشر — نحن معك في كل خطوة</div>
+    </div>
+  </div>
+
+</div>
+<div class="pg-ft"><div class="pg-ft-brand">Ad<span>Vax</span></div><div class="pg-ft-num">الصفحة ٤</div></div>
+</div>
+
+<!-- ══════════════════ PAGE 5 — CTA ══════════════════ -->
+<div class="page">
+<div class="cta-pg">
+  <div class="cta-orb1"></div>
+  <div class="cta-orb2"></div>
+  <div class="cta-grid"></div>
+  <div class="cta-inner">
+
+    <div class="cta-badge">
+      <div class="cta-badge-dot"></div>
+      متاح الآن — أماكن محدودة
+    </div>
+
+    <div class="cta-h">
+      <span class="gradient-text">ابدأ مشروعك</span><br>
+      <span class="gradient-text-pink">اليوم لا غداً</span>
+    </div>
+
+    <p class="cta-sub">
+      كل يوم بدون متجر احترافي هو يوم مكسب لمنافسك.<br>
+      انضم لعائلة AdVax واجعل متجرك يبيع 24 ساعة في اليوم، 7 أيام في الأسبوع
+    </p>
+
+    <div class="cta-boxes">
+      <div class="cta-box">
+        <div class="cta-box-ico">⚡</div>
+        <div class="cta-box-t">أقل من 24 ساعة</div>
+        <div class="cta-box-d">من لحظة تسليم بياناتك حتى إطلاق متجرك كاملاً</div>
+      </div>
+      <div class="cta-box">
+        <div class="cta-box-ico">🎯</div>
+        <div class="cta-box-t">صفر خبرة تقنية</div>
+        <div class="cta-box-d">نحن نتكفل بكل شيء التقني — أنت تركز على البيع فقط</div>
+      </div>
+      <div class="cta-box">
+        <div class="cta-box-ico">🔐</div>
+        <div class="cta-box-t">تحكم كامل</div>
+        <div class="cta-box-d">لوحة إدارة خاصة بك تضيف وتعدل منتجاتك متى شئت</div>
+      </div>
+      <div class="cta-box">
+        <div class="cta-box-ico">🔄</div>
+        <div class="cta-box-t">تحديثات مجانية</div>
+        <div class="cta-box-d">كل ميزة جديدة تصل لمتجرك تلقائياً بدون أي تكلفة إضافية</div>
+      </div>
+    </div>
+
+    <div class="price-card">
+      <div class="price-lbl">الاشتراك الشهري — شامل كل شيء</div>
+      <div class="price-main"><span>ابتداءً من</span> 500 ل.س جديدة</div>
+      <div class="price-note">متجر كامل + لوحة تحكم خاصة + دعم + تحديثات مستمرة</div>
+      <div class="price-includes">
+        <span class="pi">✓ تصميم احترافي</span>
+        <span class="pi">✓ سلة تسوق</span>
+        <span class="pi">✓ وضع ليلي</span>
+        <span class="pi">✓ SEO مدمج</span>
+        <span class="pi">✓ داشبورد خاصة</span>
+        <span class="pi">✓ دعم واتساب</span>
+      </div>
+    </div>
+
+    <div class="cta-contact-lbl">تواصل معنا وابدأ متجرك الآن</div>
+    <a href="https://www.facebook.com/share/1Anxc7Tjhp/" target="_blank" rel="noopener" class="cta-wa" style="text-decoration:none;">
+      📘 تواصل معنا على صفحتنا — AdVax أدفاكس
+    </a>
+
+    <div class="cta-footer">AdVax — متاجر إلكترونية احترافية • جميع الحقوق محفوظة ٢٠٢٦</div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
